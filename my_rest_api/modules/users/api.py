@@ -15,6 +15,8 @@ def _create_user_from_json(json_model):
         gender=json_model['gender'],
         email=json_model['email'],
         birth_date=parse(json_model['dob']['date']).date(),
+        thumbnail=json_model['picture']['thumbnail'],
+        picture=json_model['picture']['large'],
     )
     return user
 
@@ -38,6 +40,8 @@ def update_user(user_id, json_model):
         gender=json_model['gender'],
         email=json_model['email'],
         birth_date=parse(json_model['dob']['date']).date(),
+        thumbnail=json_model['picture']['thumbnail'],
+        picture=json_model['picture']['large'],
     )
     db.session.query(User).filter_by(id=user_id).update(data)
     db.session.commit()

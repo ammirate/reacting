@@ -10,7 +10,7 @@ from my_rest_api.modules.users.api import (
 from my_rest_api.modules.users.serializers import UserSerializer
 
 
-bp_user = Blueprint('users', __name__, url_prefix='/users')
+bp_user = Blueprint('users', __name__, url_prefix='/api/users')
 
 
 @bp_user.route('/', methods=['GET'])

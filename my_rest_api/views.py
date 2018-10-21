@@ -1,10 +1,16 @@
 from flask import Blueprint, jsonify
 
 
-bp = Blueprint('api', __name__, url_prefix='/api')
+bp_api = Blueprint('api', __name__, url_prefix='/api')
+bp = Blueprint('blueprint', __name__, url_prefix='/')
 
 
 @bp.route('/', methods=['GET'])
+def home():
+    return "This is y Web App"
+
+
+@bp_api.route('/', methods=['GET'])
 def api():
     return jsonify(success=True, status_code=200)
 

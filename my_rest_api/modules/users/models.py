@@ -8,6 +8,8 @@ class User(db.Model):
     gender = db.Column(db.String(15), nullable=False)
     email = db.Column(db.String(120), unique=True, nullable=False)
     birth_date = db.Column(db.Date(), nullable=True)
+    thumbnail = db.Column(db.String(200), nullable=True)
+    picture = db.Column(db.String(200), nullable=True)
 
     def __repr__(self):
         return '<User %d>' % self.id

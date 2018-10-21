@@ -8,3 +8,5 @@ class UserSerializer(Serializer):
     gender = fields.String()
     email = fields.Email()
     birth_date = fields.Date()
+    thumbnail = fields.String()
+    picture = fields.String()
