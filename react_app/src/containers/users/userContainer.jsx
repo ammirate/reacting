@@ -14,7 +14,7 @@ class UserContainer extends Component {
       <tr>
         <td>{user.id}</td>
         <td>
-          <img src={user.thumbnail} />
+          <img src={user.thumbnail} alt="X" />
         </td>
 
         <td>

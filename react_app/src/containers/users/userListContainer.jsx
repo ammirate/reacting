@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import userContainer from "./userContainer";
 import UserContainer from "./userContainer";
 
 class UserListContainer extends Component {
@@ -16,10 +15,10 @@ class UserListContainer extends Component {
       <table className="table">
         <thead className="thead-dark">
           <tr>
-            <td scope="col">#</td>
-            <td scope="col">Avatar</td>
-            <td scope="col">Name</td>
-            <td scope="col">Email</td>
+            <td>#</td>
+            <td>Avatar</td>
+            <td>Name</td>
+            <td>Email</td>
           </tr>
         </thead>
 

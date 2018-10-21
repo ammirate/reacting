@@ -1,12 +1,10 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 
 import axios from "axios";
 
 import NavBar from "./containers/application/navBar";
 import UserListContainer from "./containers/users/userListContainer";
-import UserContainer from "./containers/users/userContainer";
 
 class App extends Component {
   constructor(props) {
