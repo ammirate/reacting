@@ -7,6 +7,7 @@ class UserListContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {};
+    this.addUser = this.addUser.bind(this);
   }
 
   componentDidMount() {
@@ -16,6 +17,13 @@ class UserListContainer extends Component {
   refresh() {
     axios.get("http://127.0.0.1:5000/api/users/").then(resp => {
       this.setState({ users: resp.data });
+    });
+  }
+
+  addUser() {
+    axios.post("http://127.0.0.1:5000/api/users/").then(() => {
+      ToastStore.success("New user created!");
+      this.refresh();
     });
   }
 
@@ -37,6 +45,15 @@ class UserListContainer extends Component {
               <td>Avatar</td>
               <td>Name</td>
               <td>Email</td>
+              <td>
+                <button
+                  className="btn btn-success btn-xs m-2"
+                  onClick={this.addUser}
+                >
+                  Add random user &nbsp;
+                  <i className="fa fa-plus fa-2x" aria-hidden="true" />
+                </button>
+              </td>
             </tr>
           </thead>
 
