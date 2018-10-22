@@ -48,7 +48,9 @@ def update_user(user_id, json_model):
 
 
 def delete_user(user_id):
-    return db.session.query(User).filter_by(id=user_id).delete()
+    return_val = db.session.query(User).filter_by(id=user_id).delete()
+    db.session.commit()
+    return return_val
 
 
 def get_users():
