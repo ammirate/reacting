@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
 
-import axios from "axios";
-
 import NavBar from "./containers/application/navBar";
 import UserListContainer from "./containers/users/userListContainer";
 
@@ -12,12 +10,12 @@ class App extends Component {
     this.state = {};
   }
 
-  componentDidMount() {
-    axios.get("http://127.0.0.1:5000/api/users/").then(res => {
-      this.setState({ users: res.data });
-      console.log("[app] did mount", this.state.users);
-    });
-  }
+  // componentDidMount() {
+  //   axios.get("http://127.0.0.1:5000/api/users/").then(res => {
+  //     this.setState({ users: res.data });
+  //     console.log("[app] did mount", this.state.users);
+  //   });
+  // }
 
   render() {
     console.log("[app] render", this.state);
@@ -25,7 +23,7 @@ class App extends Component {
     return (
       <React.Fragment>
         <NavBar />
-        <UserListContainer users={this.state.users} />
+        <UserListContainer />
       </React.Fragment>
     );
   }
