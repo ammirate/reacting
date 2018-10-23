@@ -47,7 +47,7 @@ class UserListContainer extends Component {
               <td>Email</td>
               <td>
                 <button
-                  className="btn btn-success btn-xs m-2"
+                  className="btn btn-primary btn-xs m-2"
                   onClick={this.addUser}
                 >
                   Add random user &nbsp;
